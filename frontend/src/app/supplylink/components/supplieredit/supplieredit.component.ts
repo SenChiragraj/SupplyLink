@@ -104,4 +104,8 @@ export class SupplierEditComponent implements OnInit {
         }
     }
 
+    gotoDashboard ( ) {
+        this.router.navigate(['/suppylink']);
+    }
+
 }

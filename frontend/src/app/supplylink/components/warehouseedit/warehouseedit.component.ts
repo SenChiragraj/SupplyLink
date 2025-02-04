@@ -89,4 +89,8 @@ export class WarehouseEditComponent implements OnInit {
             this.successMessage = null;
         }
     }
+
+    gotoDashboard () {
+        this.router.navigate(['/suppylink']);
+    }
 }

@@ -1,17 +1,22 @@
-<nav class="navbar">
-    <ul class="navbar-list">
-        <li><a routerLink="/supplylink" class="nav-link app-name">SupplyLink</a></li>
-
-        <li *ngIf="role !== 'USER'">
-            <a routerLink="/supplylink/supplier" class="nav-link">Add New Supplier</a>
-        </li>
-        <li *ngIf="role !== 'USER'">
-            <a routerLink="/supplylink/warehouse" class="nav-link">Add New Warehouse</a>
-        </li>
-        <li *ngIf="role === 'USER'">
-            <a routerLink="/supplylink/product" class="nav-link">Add New Product</a>
-        </li>
-    </ul>
-
-    <app-logout></app-logout>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a routerLink="/supplylink" class="navbar-brand nav-link app-name fs-2 text-decoration-none">SupplyLink</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li *ngIf="role !== 'USER'" class="nav-item">
+                    <button class="btn btn-dark w-36 mx-2" (click)="onAddNewSupplier()">Add new Supplier</button>
+                </li>
+                <li *ngIf="role !== 'USER'" class="nav-item">
+                    <button class="btn btn-dark mx-2" (click)="onAddNewWarehouse()">Add new Warehouse</button>
+                </li>
+                <li *ngIf="role === 'USER'" class="nav-item">
+                    <button class="btn btn-dark mx-2" (click)="onAddNewProduct()">Add new Product</button>
+                </li>
+            </ul>
+            <app-logout></app-logout>
+        </div>
+    </div>
 </nav>

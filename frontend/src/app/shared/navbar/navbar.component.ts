@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
     selector: 'app-navbar',
@@ -21,4 +21,15 @@ export class NavBarComponent implements OnInit {
         this.router.navigate(["/auth"]);
     }
 
+    onAddNewSupplier () {
+        this.router.navigate(['/supplylink/supplier'])
+    }
+
+    onAddNewProduct () {
+        this.router.navigate(['/supplylink/product']);
+    }
+
+    onAddNewWarehouse () {
+        this.router.navigate(['/supplylink/warehouse']);
+    }
 }
